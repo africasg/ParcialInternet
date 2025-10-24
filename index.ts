@@ -82,11 +82,6 @@ const testAPI= async() => {
     console.log(miPromesaGet2);
 
     //eliminado
-// const disco: LD | undefined =miPromesa2.find((n)=> miNuevoDisco.filmName === n.filmName && miNuevoDisco.lengthMinutes === miNuevoDisco.lengthMinutes) 
-//     let idDiscoElim : number;
-//     disco ? idDiscoElim = disco.id : idDiscoElim = 0;
-//     axios.delete(`http://localhost:3000/ld/${idDiscoElim}`)
-//     const miPromesa3 = (await(axios.get<LD[]>(`http://localhost:3000/ld`))).data
     const ldAEliminar : LD | undefined = miPromesaGet2.find((n)=> creacion.filmName===n.filmName && creacion.region=== n.region && creacion.lengthMinutes=== n.lengthMinutes )
     let idEliminado : number = 0 ;
     ldAEliminar ? idEliminado = ldAEliminar.id : console.log("No se ha encontrado el id del disco");
